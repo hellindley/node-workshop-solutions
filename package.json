@@ -1,0 +1,27 @@
+{
+  "name": "node-workshop-solutions",
+  "version": "0.0.0",
+  "description": "Solutions to tasks in the Node.js Workshop",
+  "dependencies": {
+    "amqp": "0.2.0",
+    "async": "0.9.0",
+    "bl": "0.9.3",
+    "body-parser": "1.9.0",
+    "express": "4.9.7",
+    "express-handlebars": "1.1.0",
+    "mysql": "2.5.2",
+    "request": "2.45.0",
+    "socket.io": "1.1.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stephenmelrose/node-workshop-solutions"
+  },
+  "author": "Stephen Melrose <me@stephenmelrose.co.uk>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stephenmelrose/node-workshop-solutions/issues"
+  },
+  "homepage": "https://github.com/stephenmelrose/node-workshop-solutions"
+}
