@@ -1,0 +1,23 @@
+<h1>Chat</h1>
+
+<textarea class="chat-history" rows="15" cols="100" disabled></textarea>
+<br>
+<input type="text" name="message" value="">
+<input type="button" value="Send">
+
+<script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+<script type="text/javascript">
+    var socket = io.connect('/');
+    socket.on('message', function (data) {
+        $('textarea').val($('textarea').val() + '\n' + new Date().toString().substr(16, 8) + ': ' + data.message);
+        $('textarea').scrollTop($('textarea')[0].scrollHeight);
+    });
+    $('input[type=button]').click(function() {
+        var message = $('input[type=text]').val();
+        if(message) {
+            socket.emit('send_message', { message: message });
+            $('input[type=text]').val("")
+        }
+    });
+</script>
